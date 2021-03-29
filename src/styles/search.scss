@@ -1,0 +1,58 @@
+.search {
+    max-width: 1600px;
+    margin: 0px auto;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    .container{
+        position: relative;
+    }
+    .input {
+        width: 260px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        background-color: white;
+        font-size: 16px;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+    }
+    .input.active{
+        font-size: 18px;
+        width: 550px;
+        padding: 10px;
+        transition: width 0.3s ease-out,
+                    padding  0.5s ease-in-out;
+    }
+    .input.inactive{
+        transition: width 0.3s ease-out,
+                    padding  0.5s ease-in-out;
+    }
+    .button {
+        position: absolute;
+        outline: none;
+        background-color: #2ee5ac;
+        color: #ffffff;
+        border: none;
+        padding: 5px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        right: 1px;
+        top: 1px;
+    }
+    .button.active{
+        width: 140px;
+        padding: 11px;
+        transition: width 0.3s ease-out,
+                    padding  0.5s ease-in-out;
+    }
+    .button.inactive{
+        transition: width 0.3s ease-out,
+                    padding  0.5s ease-in-out;
+    }
+    .button:hover{
+        background-color: #16b683;
+    }
+
+}

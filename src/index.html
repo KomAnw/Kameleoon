@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/styles/default.min.css">
+    <title>Kameleoon</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="container-left">
+                <img src="<%=require('./imgs/logo.svg')%>" alt="" class="img">
+            </div>
+            <div class="container-center">
+            </div>
+            <div class="container-right">
+                <label class="switch">
+                    <input type="checkbox">
+                    <div>
+                        <span></span>
+                    </div>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="search">
+            <div class="container">
+                <input class="input" size="572px" type="text" placeholder="Введите ключевое слово..." maxlength="35">
+                <button class="button">Поиск</button>
+            </div>
+        </section>
+
+        <section class="add-code">
+            <div class="code-field">
+                <h3 class="code-head">Добавить код в базу данных</h3>
+                <button class="code-close">+</button>
+                <div class="head-container">
+                    <label for="tagsField" class="tags-label">Введите ключевые слова:</label>
+                    <input name="tagsField" type="text" class="tags" placeholder="Поиск по элементам / Виден ли элемент и т.д.">
+                </div>
+                <div class="description-container">
+                    <label for="descriptionField" class="description-label">Введите небольшое описание:</label>
+                    <input name="descriptionField" type="text" class="description" placeholder="Данная функция делает...">
+                </div>
+                <div class="code-container">
+                    <label for="codeField" class="code-label">Введите код:</label>
+                    <textarea name="codeField" class="code" placeholder="Поле для вставки кода"></textarea>
+                </div>
+                <button class="send">Отправить</button>
+            </div>
+        </section>
+
+        <section class="result">
+            <h2 class="result-title">Найдено по запросу:</h2>
+            <div class="card">
+                <h2 class="title">Теги: ${tags}</h2>
+                <p class="description">Описание: ${description}</p>
+                <pre class="language-js line-numbers code">
+                    <code class="js">
+                        ${code}
+                    </code>
+                </pre>
+            </div>
+        </section>
+
+        <footer class="footer"></footer>
+
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+            <span></span>
+        </label>
+        <div class="controls">
+            <button class="delete">+</button>
+            <button class="add">+</button>
+        </div>
+
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-database.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.1/highlight.min.js"></script>
+</body>
+
+</html>

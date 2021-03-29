@@ -1,0 +1,16 @@
+@import './fonts/fonts.css';
+@import './styles/header.scss';
+@import './styles/search.scss';
+@import './styles/result.scss';
+@import './styles/prism.css';
+@import './styles/add-code.scss';
+@import './styles//control-button.scss';
+
+body {
+  margin: 0 auto;
+  background-color: white;
+  font-family: 'Roboto';
+  font-style:  medium;
+}
+
+// TODO black theme
